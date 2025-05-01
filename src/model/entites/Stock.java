@@ -14,13 +14,12 @@ public class Stock {
         stocks.put(product.getId(), product);
     }
 
-    public  void RemoveStock(int id){
-        for(Integer i: stocks.keySet() ){
-            if(stocks.equals(i)){
-                stocks.remove(i);
-                System.out.println(stocks.get(i)+"Foi removido");
-                break;
-            }
+    public void removeStock(int id) {
+        Product removed = stocks.remove(id); // Remove e retorna o produto
+        if(removed != null) {
+            System.out.println(removed.getName() + " foi removido");
+        } else {
+            System.out.println("Produto com ID " + id + " não encontrado");
         }
     }
 

@@ -41,7 +41,7 @@ public class Programing {
                 case 2:
                     System.out.println("Insira o Id para ser removido");
                     int idr= sc.nextInt();
-                    stock.RemoveStock(idr);
+                    stock.removeStock(idr);
                     break;
                 case 3:
                     System.out.println("Passe a id do produto para aumentar a quantidade");
