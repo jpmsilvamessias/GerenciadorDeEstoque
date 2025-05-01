@@ -5,19 +5,8 @@ import java.time.format.DateTimeFormatter;
 
 public class ManagementeStock {
     DateTimeFormatter dfm= DateTimeFormatter.ofPattern("dd/MM/yyyy");
-    Product product;
     LocalDate date=LocalDate.now();
     String dateFormat= dfm.format(date);
-
-    public ManagementeStock(Product product) {
-        this.product = product;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-
 
     public void exitProduct(Product p){
         System.out.println(p.getName()+"Saiu do estoque:"+dateFormat);

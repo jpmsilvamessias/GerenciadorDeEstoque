@@ -5,20 +5,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Stock {
-    Product product;
+
     HashMap<Integer ,Product> stocks= new HashMap<>();
 
-    public Stock(Product product) {
-        this.product = product;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
 
     public void addStock(Product product){
         System.out.println(product.getName()+"Adcionado no estoque");
@@ -35,7 +24,7 @@ public class Stock {
         }
     }
 
-    public void increaseQuantity(int quantity){
+    public void increaseQuantity(Product product,int quantity){
         product.setQuantity(product.getQuantity()+quantity);
     }
 
@@ -43,7 +32,7 @@ public class Stock {
         return stocks.get(id);
     }
 
-    public  Product searchProductName(String name){
+    public  Product searchProductName(Product product,String name){
         return (Product) stocks.values().stream().filter(x->name.equals(product.getName())).collect(Collectors.toList());
     }
 

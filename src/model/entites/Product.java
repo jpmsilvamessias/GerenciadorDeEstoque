@@ -7,9 +7,9 @@ public class Product {
     Types category;
     Integer id;
     Integer quantity;
-    Integer price;
+    Double price;
 
-    public Product(String name, Types category, Integer id, Integer quantity, Integer price) {
+    public Product(String name, Types category, Integer id, Integer quantity, Double price) {
         this.name = name;
         this.category = category;
         this.id = id;
@@ -49,11 +49,11 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public Integer getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 }
