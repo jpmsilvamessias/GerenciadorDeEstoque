@@ -24,9 +24,16 @@ public class Stock {
         }
     }
 
-    public void increaseQuantity(Product product,int quantity){
-        product.setQuantity(product.getQuantity()+quantity);
+    public void increaseQuantity(int id, int quantity) {
+        if (stocks.containsKey(id)) {
+            Product product = stocks.get(id);
+            product.setQuantity(product.getQuantity() + quantity);
+        } else {
+            System.out.println("Produto nao existe");
+        }
     }
+
+
 
     public  Product searchProductid(Integer id){
         return stocks.get(id);

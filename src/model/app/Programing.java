@@ -41,6 +41,8 @@ public class Programing {
                     System.out.println("Insira o Id para ser removido");
                     int idr= sc.nextInt();
                     stock.RemoveStock(idr);
+                case 3:
+
             }
         }
 
