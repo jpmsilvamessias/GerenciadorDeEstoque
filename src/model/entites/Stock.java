@@ -39,9 +39,13 @@ public class Stock {
         return stocks.get(id);
     }
 
-    public  Product searchProductName(Product product,String name){
-        return (Product) stocks.values().stream().filter(x->name.equals(product.getName())).collect(Collectors.toList());
+    public Product searchProductName(String name) {
+        return stocks.values().stream()
+                .filter(p -> name.equalsIgnoreCase(p.getName()))
+                .findFirst()
+                .orElse(null);
     }
+
 
     public void listAllProducts(){
         for(Integer i:stocks.keySet()){

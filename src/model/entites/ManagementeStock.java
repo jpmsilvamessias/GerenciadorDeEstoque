@@ -8,9 +8,6 @@ public class ManagementeStock {
     LocalDate date=LocalDate.now();
     String dateFormat= dfm.format(date);
 
-    public void exitProduct(Product p){
-        System.out.println(p.getName()+"Saiu do estoque:"+dateFormat);
-    }
 
     public void entryProduct(Product p){
         System.out.println(p.getName()+"Entrou no estoque:"+dateFormat);
