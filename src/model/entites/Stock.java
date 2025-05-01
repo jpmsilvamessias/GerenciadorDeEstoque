@@ -47,11 +47,14 @@ public class Stock {
     }
 
 
-    public void listAllProducts(){
-        for(Integer i:stocks.keySet()){
-            System.out.println(i+":"+stocks.get(i));
+    public void listAllProducts() {
+        for (Integer i : stocks.keySet()) {
+            Product p = stocks.get(i);
+            System.out.println(i + ": " + p.getName() + " | Qtd: " + p.getQuantity());
         }
     }
-    }
+
+}
+
 
 

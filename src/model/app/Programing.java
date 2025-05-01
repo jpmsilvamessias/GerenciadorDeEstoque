@@ -37,27 +37,33 @@ public class Programing {
                     Product product= new Product(name, Types.valueOf(cate),id,quantity,price);
                     stock.addStock(product);
                     management.entryProduct(product);
+                    break;
                 case 2:
                     System.out.println("Insira o Id para ser removido");
                     int idr= sc.nextInt();
                     stock.RemoveStock(idr);
+                    break;
                 case 3:
                     System.out.println("Passe a id do produto para aumentar a quantidade");
                     int idq= sc.nextInt();
                     System.out.println("Insira a quantidade");
                     int quan= sc.nextInt();
                     stock.increaseQuantity(idq,quan);
+                    break;
                 case 4:
                     System.out.println("Insira o id para buscarmos");
                     int idb= sc.nextInt();
                     stock.searchProductid(idb);
+                    break;
                 case 5:
                     System.out.println("Buscar produto por nome");
                     String nameb= sc.next();
                     stock.searchProductName(nameb);
+                    break;
                 case 6:
                     System.out.println("Vamos listar todos os items");
                     stock.listAllProducts();
+                    break;
             }
         }
 
