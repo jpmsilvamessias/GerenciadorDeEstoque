@@ -52,13 +52,25 @@ public class Programing {
                     break;
                 case 4:
                     System.out.println("Insira o id para buscarmos");
-                    int idb= sc.nextInt();
-                    stock.searchProductid(idb);
+                    int idb = sc.nextInt();
+                    Product p = stock.searchProductid(idb);
+                    if (p != null) {
+                        System.out.println("Produto encontrado: " + p.getName() + ", Qtd: " + p.getQuantity());
+                    } else {
+                        System.out.println("Produto não encontrado");
+                    }
                     break;
+
                 case 5:
                     System.out.println("Buscar produto por nome");
                     String nameb= sc.next();
-                    stock.searchProductName(nameb);
+                    Product s=stock.searchProductName(nameb);
+                    if(s!=null){
+                        System.out.println("Produto encontrado: " + s.getName() + ", Qtd: " + s.getQuantity());
+                    }else{
+                        System.out.println("Produto nao encontrado");
+                    }
+
                     break;
                 case 6:
                     System.out.println("Vamos listar todos os items");
